@@ -1,6 +1,16 @@
 #!/usr/bin/env fish
 # Auto-generate Fish shell completions from --help or -h output
 # Usage: fish generate_help_completions.fish <command_name>
+# cp generate_completions_from_help.fish ~/.config/fish/functions/
+# chmod +x ~/.config/fish/functions/generate_completions_from_help.fish
+# source ~/.config/fish/config.fish
+# generate_completions_from_help curl
+# generate_completions_from_help wget
+# generate_completions_from_help git
+# generate_completions_batch curl wget tar rsync ffmpeg 
+# generate_completions_from_help -f curl Force Regeneration Overwrite Existing
+# Fish Version v4.0.2
+
 
 function generate_help_completions --description "Generate Fish completions from --help output"
     set -l command $argv[1]
